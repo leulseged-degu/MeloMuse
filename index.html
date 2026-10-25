@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MeloMuse</title>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/melomuse-icon.png">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <a href="#" class="logo" id="brandLogo" aria-label="MeloMuse home">
+            <img src="images/melomuse-logo2.png" alt="MeloMuse">
+        </a>
+
+        <nav>
+
+            <a href="#" id="homeLink" class="active">
+                <i data-lucide="house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="trending-up"></i>
+                <span>Trending</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="compass"></i>
+                <span>Discover</span>
+            </a>
+
+            <a href="#" id="favoritesLink">
+                <i data-lucide="heart"></i>
+                <span>Favorites</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="library"></i>
+                <span>My Library</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="search"></i>
+                <span>Search</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <button id="themeToggle" class="theme-toggle">
+                <i data-lucide="sun"></i>
+                <span>Light Mode</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <section id="favoritesView" class="favorites-view">
+
+            <header>
+                <h2 class="section-title">
+                    Your Favorites
+                    <i data-lucide="heart"></i>
+                </h2>
+
+                <p>Songs you've saved.</p>
+            </header>
+
+            <div id="favoritesContainer" class="song-container">
+            </div>
+
+        </section>
+
+        <header>
+
+            <h2 class="section-title">
+                Good evening
+                <i data-lucide="hand"></i>
+            </h2>
+
+            <p>Discover your next favorite song.</p>
+
+        </header>
+
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search songs, artists..."
+            >
+
+            <button id="searchButton">
+                Search
+            </button>
+
+        </section>
+
+        <section class="genres">
+
+            <h2 class="section-title">
+                Explore Genres
+                <i data-lucide="compass"></i>
+            </h2>
+
+            <button>All</button>
+            <button>R&B</button>
+            <button>Pop</button>
+            <button>Hip-Hop</button>
+            <button>Afrobeats</button>
+
+        </section>
+
+
+        <section class="songs">
+
+            <h2 class="section-title">
+                Trending Now
+                <i data-lucide="flame"></i>
+            </h2>
+
+            <div class="song-container">
+
+                <div class="song-card">
+
+                    <div class="album-cover">
+                        <img
+                            src="images/snooze.jpg"
+                            alt="Snooze album cover"
+                        >
+                    </div>
+
+                    <h3>Snooze</h3>
+                    <p>SZA</p>
+
+                    <div class="song-actions">
+
+                        <button>▶ Play</button>
+                        
+                        <button class="favorite-button">
+                            <i data-lucide="heart"></i>    
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="song-card">
+
+                    <div class="album-cover">
+                        <img
+                            src="images/heartbreak.jpg"
+                            alt="Heartbreak Anniversary album cover"
+                        >
+                    </div>
+
+                    <h3>Heartbreak Anniversary</h3>
+                    <p>Giveon</p>
+                    
+                    <div class="song-actions">
+
+                        <button>▶ Play</button>
+
+                        <button class="favorite-button">
+                            <i data-lucide="heart"></i>    
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="song-card">
+
+                    <div class="album-cover">
+                        <img
+                            src="images/videogames.jpg"
+                            alt="Video Games album cover"
+                        >
+                    </div>
+
+                    <h3>Video Games</h3>
+                    <p>Lana Del Rey</p>
+
+                    <div class="song-actions">
+
+                        <button>▶ Play</button>
+                        
+                        <button class="favorite-button">
+                            <i data-lucide="heart"></i>    
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="new-releases">
+
+            <h2 class="section-title">
+                New Releases
+                <i data-lucide="sparkles"></i>
+            </h2>
+
+            <div class="release-list">
+
+                <div class="release">
+
+                    <span>🎵</span>
+
+                    <div>
+                        <h3>New Song</h3>
+                        <p>New Artist</p>
+                    </div>
+
+                    <button aria-label="Play New Song">
+                        <i data-lucide="play"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="release">
+
+                    <span>🎵</span>
+
+                    <div>
+                        <h3>Another Song</h3>
+                        <p>Another Artist</p>
+                    </div>
+
+                    <button aria-label="Play Another Song">
+                        <i data-lucide="play"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>
