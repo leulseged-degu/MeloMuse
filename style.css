@@ -770,6 +770,7 @@ body.light-mode .album-cover {
 
 }
 
-.favorites-view {
+.favorites-view,
+.trending-view {
     display: none;
 }
