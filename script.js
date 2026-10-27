@@ -122,6 +122,7 @@ themeToggle.addEventListener("click", () => {
 const homeLink = document.getElementById("homeLink");
 const trendingLink = document.getElementById("trendingLink");
 const favoritesLink = document.getElementById("favoritesLink");
+const discoverLink = document.getElementById("discoverLink");
 
 const homeHeader = document.querySelector(".main-content > header");
 const searchSection = document.querySelector(".search-section");
@@ -131,7 +132,7 @@ const releasesSection = document.querySelector(".new-releases");
 
 const favoritesView = document.getElementById("favoritesView");
 const trendingView = document.getElementById("trendingView");
-
+const discoverView = document.getElementById("discoverView");
 
 // =========================
 // ACTIVE SIDEBAR LINK
@@ -142,6 +143,7 @@ function setActiveLink(activeLink) {
     homeLink.classList.remove("active");
     trendingLink.classList.remove("active");
     favoritesLink.classList.remove("active");
+    discoverLink.classList.remove("active");
 
     activeLink.classList.add("active");
 
@@ -166,6 +168,7 @@ homeLink.addEventListener("click", function (event) {
     // Hide other pages
     favoritesView.style.display = "none";
     trendingView.style.display = "none";
+    discoverView.style.display = "none";
 
     // Show all original songs
     songCards.forEach(function (card) {
@@ -197,6 +200,7 @@ trendingLink.addEventListener("click", function (event) {
 
     // Hide Favorites
     favoritesView.style.display = "none";
+    discoverView.style.display = "none";
 
     // Show Trending
     trendingView.style.display = "block";
@@ -226,6 +230,7 @@ favoritesLink.addEventListener("click", function (event) {
 
     // Hide Trending
     trendingView.style.display = "none";
+    discoverView.style.display = "none";
 
     // Show Favorites
     favoritesView.style.display = "block";
@@ -238,4 +243,32 @@ favoritesLink.addEventListener("click", function (event) {
 
     favoritesLink.blur();
 
+});
+
+//=========================
+// DISCOVER PAGE
+//=========================
+
+discoverLink.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    // Hide Home content
+    homeHeader.style.display = "none";
+    searchSection.style.display = "none";
+    genresSection.style.display = "none";
+    songsSection.style.display = "none";
+    releasesSection.style.display = "none";
+
+    // Hide other pages
+    favoritesView.style.display = "none";
+    trendingView.style.display = "none";
+
+    // Show Discover page
+    discoverView.style.display = "block";
+
+    // Update sidebar
+    setActiveLink(discoverLink);
+
+    // Render Lucide icons
+    lucide.createIcons();
 });

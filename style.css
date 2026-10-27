@@ -771,6 +771,106 @@ body.light-mode .album-cover {
 }
 
 .favorites-view,
-.trending-view {
+.trending-view,
+.discover-view {
     display: none;
+}
+
+
+/* DISCOVER PAGE */
+.discover-view {
+    padding: 10px 0;
+}
+
+.discover-view > header {
+    margin-bottom: 30px;
+}
+
+.discover-view > header p {
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+/* MOOD SECTION */
+.mood-section {
+    margin-bottom: 35px;
+}
+
+.mood-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.mood-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 20px;
+    padding: 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.mood-card:hover {
+    background: linear-gradient(
+        135deg,
+        #315cff,
+        #9b3cff
+    );
+    color: white;
+    border-color: transparent;
+    box-shadow:
+        0 6px 18px rgba(91, 70, 255, 0.2);
+}
+
+.mood-card i {
+    width: 21px;
+    height: 21px;
+}
+
+.mood-card:hover {
+    transform: translateY(-4px);
+    border-color: #a855f7;
+}
+
+/* RECOMMENDED SONGS */
+.discover-songs {
+    margin-top: 25px;
+}
+
+.discover-songs .song-container {
+    margin-top: 18px;
+}
+
+/* HIDE INACTIVE PAGES */
+.favorites-view,
+.trending-view,
+.discover-view {
+    display: none;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .discover-view {
+        padding: 5px 0;
+    }
+
+    .mood-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .mood-card {
+        min-height: 30px;
+        padding: 12px;
+        font-size: 14px;
+    }
 }

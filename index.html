@@ -33,7 +33,7 @@
                 <span>Trending</span>
             </a>
 
-            <a href="#">
+            <a href="#" id="discoverLink">
                 <i data-lucide="compass"></i>
                 <span>Discover</span>
             </a>
@@ -142,6 +142,103 @@
             </div>
 
         </section>
+
+
+
+        <section id="discoverView" class="discover-view">
+
+            <header>
+                <h2 class="section-title">
+                    Discover Music
+                    <i data-lucide="compass"></i>
+                </h2>
+                <p>Find music that matches your mood.</p>
+            </header>
+
+            <section class="mood-section">
+                <h2 class="section-title">How are you feeling?</h2>
+
+                <div class="mood-container">
+                    <button class="mood-card" data-mood="Chill">
+                        <i data-lucide="cloud-moon"></i>
+                        <span>Chill</span>
+                    </button>
+
+                    <button class="mood-card" data-mood="Happy">
+                        <i data-lucide="sun"></i>
+                        <span>Happy</span>
+                    </button>
+
+                    <button class="mood-card" data-mood="Heartbroken">
+                        <i data-lucide="heart-crack"></i>
+                        <span>Heartbroken</span>
+                    </button>
+
+                    <button class="mood-card" data-mood="Focus">
+                        <i data-lucide="brain"></i>
+                        <span>Focus</span>
+                    </button>
+
+                    <button class="mood-card" data-mood="Late Night">
+                        <i data-lucide="moon"></i>
+                        <span>Late Night</span>
+                    </button>
+                </div>
+            </section>
+
+            
+            <section class="discover-songs">
+                <h2 class="section-title">Recommended for You</h2>
+
+                <div class="song-container">
+
+                    <div class="song-card">
+                        <div class="album-cover">
+                            <img src="images/snooze.jpg" alt="Snooze cover">
+                        </div>
+                        <h3>Snooze</h3>
+                        <p>SZA</p>
+                        <div class="song-actions">
+                            <button>▶ Play</button>
+                            <button class="favorite-button">
+                                <i data-lucide="heart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="song-card">
+                        <div class="album-cover">
+                            <img src="images/heartbreak.jpg" alt="Heartbreak Anniversary cover">
+                        </div>
+                        <h3>Heartbreak Anniversary</h3>
+                        <p>Giveon</p>
+                        <div class="song-actions">
+                            <button>▶ Play</button>
+                            <button class="favorite-button">
+                                <i data-lucide="heart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="song-card">
+                        <div class="album-cover">
+                            <img src="images/videogames.jpg" alt="Video Games cover">
+                        </div>
+                        <h3>Video Games</h3>
+                        <p>Lana Del Rey</p>
+                        <div class="song-actions">
+                            <button>▶ Play</button>
+                            <button class="favorite-button">
+                                <i data-lucide="heart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+
 
         <header>
 
@@ -317,7 +414,6 @@
         </section>
 
     </main>
-
 
     <script src="script.js"></script>
 
