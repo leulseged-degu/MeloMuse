@@ -48,7 +48,7 @@
                 <span>My Library</span>
             </a>
 
-            <a href="#">
+            <a href="#" id="searchLink">
                 <i data-lucide="search"></i>
                 <span>Search</span>
             </a>
@@ -235,6 +235,46 @@
                     </div>
 
                 </div>
+            </section>
+
+        </section>
+
+
+        <section id="searchView" class="search-view">
+
+            <header class="search-page-header">
+                <h2 class="section-title">
+                    Search MeloMuse
+                    <i data-lucide="search"></i>
+                </h2>
+
+                <p>Find your favorite songs and artists.</p>
+            </header>
+
+            <div class="search-page-box">
+                <i data-lucide="search"></i>
+
+                <input
+                    type="text"
+                    id="searchPageInput"
+                    placeholder="Search songs or artists..."
+                    autocomplete="off"
+                >
+
+                <button type="button" id="searchPageButton" class="search-page-button">
+                    Search
+                </button>
+            </div>
+
+            <section class="search-results">
+                <h2 class="section-title">Results</h2>
+
+                <div id="searchResults" class="song-container">
+                    <p class="search-message">
+                        Start typing to search for music.
+                    </p>
+                </div>
+
             </section>
 
         </section>

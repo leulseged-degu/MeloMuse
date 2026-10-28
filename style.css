@@ -772,7 +772,8 @@ body.light-mode .album-cover {
 
 .favorites-view,
 .trending-view,
-.discover-view {
+.discover-view,
+.search-view {
     display: none;
 }
 
@@ -871,6 +872,135 @@ body.light-mode .album-cover {
     .mood-card {
         min-height: 30px;
         padding: 12px;
+        font-size: 14px;
+    }
+}
+
+
+/* ===============================
+   SEARCH PAGE
+================================ */
+
+.search-view {
+    padding: 10px 0;
+}
+
+.search-page-header {
+    margin-bottom: 28px;
+}
+
+.search-page-header p {
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+/* SEARCH INPUT */
+
+
+.search-page-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    margin-bottom: 35px;
+    border: 1px solid #3a3a46;
+    border-radius: 14px;
+    background: var(--card-bg);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.search-page-box:focus-within {
+    border-color: #a855f7;
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.12);
+}
+
+
+.search-page-box i {
+    width: 22px;
+    height: 22px;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+.search-page-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.search-page-box input::placeholder {
+    color: var(--text-secondary);
+}
+
+/* SEARCH RESULTS */
+
+.search-results {
+    margin-top: 20px;
+}
+
+.search-results .song-container {
+    margin-top: 18px;
+}
+
+.search-message {
+    color: var(--text-secondary);
+    padding: 25px 0;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+
+.search-page-button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #a855f7;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.search-message {
+    color: #9b9ba8;
+}
+
+.search-page-header p {
+    color: #9b9ba8;
+
+}
+
+.search-page-button:hover {
+    background: #9333ea;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+    .search-page-button {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .search-view {
+        padding: 5px 0;
+    }
+
+    .search-page-box {
+        padding: 13px;
+        margin-bottom: 25px;
+    }
+
+    .search-page-box input {
         font-size: 14px;
     }
 }
